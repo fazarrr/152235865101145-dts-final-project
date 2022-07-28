@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const baseUrl = "https://newsapi.org/v2b/";
-const { REACT_APP_NEWS_API_KEY } = process.env;
+// const { REACT_APP_NEWS_API_KEY } = process.env;
 
 const Indonesia = axios.create({
   // baseUrl: baseUrl,

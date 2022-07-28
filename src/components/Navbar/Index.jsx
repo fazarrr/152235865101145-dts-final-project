@@ -42,16 +42,16 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink to="/series" activeStyle>
-            Series
+            Teknologi
           </NavLink>
           <NavLink to="/movies" activeStyle>
-            Movies
+            Kesehatan
           </NavLink>
           <NavLink to="/newandpopular" activeStyle>
-            New and Popular
+            Olahraga
           </NavLink>
           <NavLink to="/mylist" activeStyle>
-            My List
+            Ekonomi
           </NavLink>
         </NavMenu>
         <NavBtn>

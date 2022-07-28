@@ -42,7 +42,7 @@ export const NewsSlider = ({ data, title, original }) => {
 
   const news = data;
   return (
-    <div className="container movie-slider">
+    <div className="container news-slider">
       <p className="list-title">{title ? title : "Unamed List"}</p>
       <Slider {...settings}>
         {news.map((e, i) => {
@@ -52,11 +52,19 @@ export const NewsSlider = ({ data, title, original }) => {
               className={`${original ? "original" : "list"} centered`}
             >
               <Link to={"/"}>
-                <img
-                  className={`slider-image ${original ? "original" : "list"}`}
-                  src={e.urlToImage}
-                  alt={e.title}
-                />
+                {e.urlToImage != null ? (
+                  <img
+                    className={`slider-image ${original ? "original" : "list"}`}
+                    src={e.urlToImage}
+                    alt={e.title}
+                  />
+                ) : (
+                  <img
+                    className={`slider-image ${original ? "original" : "list"}`}
+                    src={require("../assets/no-image.jpg")}
+                    alt={e.title}
+                  />
+                )}
                 <div className="list-judul">{e.title}</div>
               </Link>
             </div>
