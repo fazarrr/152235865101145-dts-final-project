@@ -6,10 +6,10 @@ import { Indonesia, Austria, Jepang, Australia, Kanada } from "../apis/News";
 
 export const Homepage = () => {
   const [topHeadlinesIndonesia, setTopHeadlinesIndonesia] = useState([]);
-  const [topHeadlinesAustria, setTopHeadlinesAustria] = useState([]);
-  const [topHeadlinesJepang, setTopHeadlinesJepang] = useState([]);
-  const [topHeadlinesAustralia, setTopHeadlinesAustralia] = useState([]);
-  const [topHeadlinesKanada, setTopHeadlinesKanada] = useState([]);
+  // const [topHeadlinesAustria, setTopHeadlinesAustria] = useState([]);
+  // const [topHeadlinesJepang, setTopHeadlinesJepang] = useState([]);
+  // const [topHeadlinesAustralia, setTopHeadlinesAustralia] = useState([]);
+  // const [topHeadlinesKanada, setTopHeadlinesKanada] = useState([]);
 
   useEffect(() => {
     const fetchIndonesia = async () => {
@@ -17,24 +17,26 @@ export const Homepage = () => {
         const fetchedTopHeadlinesIndonesia = await Indonesia.get(
           "https://api.spaceflightnewsapi.net/v3/articles"
         );
-        const fetchedTopHeadlinesAustria = await Austria.get(
-          "https://newsapi.org/v2/top-headlines"
-        );
-        const fetchedTopHeadlinesJepang = await Jepang.get(
-          "https://newsapi.org/v2/top-headlines"
-        );
-        const fetchedTopHeadlinesAustralia = await Australia.get(
-          "https://newsapi.org/v2/top-headlines"
-        );
-        const fetchedTopHeadlinesKanada = await Kanada.get(
-          "https://newsapi.org/v2/top-headlines"
-        );
+        // const fetchedTopHeadlinesAustria = await Austria.get(
+        //   "https://newsapi.org/v2/top-headlines"
+        // );
+        // const fetchedTopHeadlinesJepang = await Jepang.get(
+        //   "https://newsapi.org/v2/top-headlines"
+        // );
+        // const fetchedTopHeadlinesAustralia = await Australia.get(
+        //   "https://newsapi.org/v2/top-headlines"
+        // );
+        // const fetchedTopHeadlinesKanada = await Kanada.get(
+        //   "https://newsapi.org/v2/top-headlines"
+        // );
 
         setTopHeadlinesIndonesia(fetchedTopHeadlinesIndonesia.data);
-        setTopHeadlinesAustria(fetchedTopHeadlinesAustria.data.articles);
-        setTopHeadlinesJepang(fetchedTopHeadlinesJepang.data.articles);
-        setTopHeadlinesAustralia(fetchedTopHeadlinesAustralia.data.articles);
-        setTopHeadlinesKanada(fetchedTopHeadlinesKanada.data.articles);
+        console.log(fetchedTopHeadlinesIndonesia.data);
+
+        // setTopHeadlinesAustria(fetchedTopHeadlinesAustria.data.articles);
+        // setTopHeadlinesJepang(fetchedTopHeadlinesJepang.data.articles);
+        // setTopHeadlinesAustralia(fetchedTopHeadlinesAustralia.data.articles);
+        // setTopHeadlinesKanada(fetchedTopHeadlinesKanada.data.articles);
       } catch (error) {
         console.log(error);
       }
