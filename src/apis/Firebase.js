@@ -9,12 +9,12 @@ const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
   // apiKey: apiKey,
-  apiKey: "AIzaSyAZ0-lmPzDeA0D0H4wRpootxLz6Mcte2vA",
-  authDomain: "fab-movie.firebaseapp.com",
-  projectId: "fab-movie",
-  storageBucket: "fab-movie.appspot.com",
-  messagingSenderId: "71869180283",
-  appId: "1:71869180283:web:508cb4acfb13e320cc75de",
+  apiKey: "AIzaSyDhh8NR_9PGOJE0-92G8lyFJRPy7H4cAdU",
+  authDomain: "fab-news.firebaseapp.com",
+  projectId: "fab-news",
+  storageBucket: "fab-news.appspot.com",
+  messagingSenderId: "24545891840",
+  appId: "1:24545891840:web:bf55d9244f79170ad12ae5",
 };
 
 // Initialize Firebase

@@ -15,7 +15,7 @@ export const Homepage = () => {
     const fetchIndonesia = async () => {
       try {
         const fetchedTopHeadlinesIndonesia = await Indonesia.get(
-          "https://newsapi.org/v2/top-headlines"
+          "https://api.spaceflightnewsapi.net/v3/articles"
         );
         const fetchedTopHeadlinesAustria = await Austria.get(
           "https://newsapi.org/v2/top-headlines"
@@ -30,7 +30,7 @@ export const Homepage = () => {
           "https://newsapi.org/v2/top-headlines"
         );
 
-        setTopHeadlinesIndonesia(fetchedTopHeadlinesIndonesia.data.articles);
+        setTopHeadlinesIndonesia(fetchedTopHeadlinesIndonesia.data);
         setTopHeadlinesAustria(fetchedTopHeadlinesAustria.data.articles);
         setTopHeadlinesJepang(fetchedTopHeadlinesJepang.data.articles);
         setTopHeadlinesAustralia(fetchedTopHeadlinesAustralia.data.articles);

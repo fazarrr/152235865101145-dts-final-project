@@ -1,15 +1,15 @@
 import axios from "axios";
 
-// const baseUrl = "https://newsapi.org/v2b/";
+const baseUrl = "https://api.spaceflightnewsapi.net/v3/";
 // const { REACT_APP_NEWS_API_KEY } = process.env;
 
 const Indonesia = axios.create({
-  // baseUrl: baseUrl,
-  params: {
-    // apiKey: REACT_APP_NEWS_API_KEY,
-    country: "id",
-    apiKey: "c05b1c45e5f54f80a5362b4e0d12f406",
-  },
+  baseUrl: baseUrl,
+  // params: {
+  //   // apiKey: REACT_APP_NEWS_API_KEY,
+  //   country: "id",
+  //   apiKey: "c05b1c45e5f54f80a5362b4e0d12f406",
+  // },
 });
 
 const Austria = axios.create({

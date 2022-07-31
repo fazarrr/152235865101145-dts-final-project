@@ -65,16 +65,16 @@ class CustomSlide extends Component {
           <div
             style={{ fontWeight: 300, fontSize: "12px", marginBottom: "15px" }}
           >
-            {news.source.name}
+            {news.newsSite}
           </div>
           <div
             style={{ fontWeight: 400, fontSize: "15px", marginBottom: "5px" }}
           >
-            {news.description}
+            {news.summary}
           </div>
         </div>
         <div className="news-image-carousel">
-          <img src={news.urlToImage} alt="news-poster" className="masked" />
+          <img src={news.imageUrl} alt="news-poster" className="masked" />
         </div>
       </div>
     );
