@@ -51,7 +51,7 @@ export const Homepage = () => {
           INTERNATIONAL MONETARY FUND - IMF
         </marquee> */}
       </div>
-      <NewsSlider
+      {/* <NewsSlider
         title={"Benua Eropa - Austria News Update"}
         data={topHeadlinesAustria}
       />
@@ -66,7 +66,7 @@ export const Homepage = () => {
       <NewsSlider
         title={"Benua Amerika - Kanada News Update"}
         data={topHeadlinesKanada}
-      />
+      /> */}
     </div>
   );
 };
