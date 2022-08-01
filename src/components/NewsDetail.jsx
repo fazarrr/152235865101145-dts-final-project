@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieDetail = ({ data }) => {
+const NewsDetail = ({ data }) => {
   //   const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/original";
   return (
     <div>
@@ -55,4 +55,4 @@ const MovieDetail = ({ data }) => {
   );
 };
 
-export default MovieDetail;
+export default NewsDetail;

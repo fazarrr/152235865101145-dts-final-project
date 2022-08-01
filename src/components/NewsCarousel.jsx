@@ -1,3 +1,4 @@
+import { red } from "@mui/material/colors";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
@@ -58,7 +59,12 @@ class CustomSlide extends Component {
           }}
         >
           <div
-            style={{ fontWeight: 600, fontSize: "32px", marginBottom: "15px" }}
+            style={{
+              color: "#d50000",
+              fontWeight: 600,
+              fontSize: "32px",
+              marginBottom: "15px",
+            }}
           >
             {news.title}
           </div>

@@ -3,7 +3,7 @@ import axios from "axios";
 const baseUrl = "https://api.spaceflightnewsapi.net/v3/";
 // const { REACT_APP_NEWS_API_KEY } = process.env;
 
-const Indonesia = axios.create({
+const BaseNews = axios.create({
   baseUrl: baseUrl,
   // params: {
   //   // apiKey: REACT_APP_NEWS_API_KEY,
@@ -48,4 +48,4 @@ const Kanada = axios.create({
   },
 });
 
-export { Indonesia, Austria, Jepang, Australia, Kanada };
+export { BaseNews, Austria, Jepang, Australia, Kanada };

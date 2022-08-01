@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 // import { landscape, portrait } from "../components/DummyData";
 import { NewsCarousel } from "../components/NewsCarousel";
 import NewsSlider from "../components/NewsSlider";
-import { Indonesia, Austria, Jepang, Australia, Kanada } from "../apis/News";
+import { BaseNews, Austria, Jepang, Australia, Kanada } from "../apis/News";
 
 export const Homepage = () => {
+  const [articles, setArticles] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+  const [infos, setInfos] = useState([]);
+  const [reports, setReports] = useState([]);
   const [topHeadlinesIndonesia, setTopHeadlinesIndonesia] = useState([]);
   // const [topHeadlinesAustria, setTopHeadlinesAustria] = useState([]);
   // const [topHeadlinesJepang, setTopHeadlinesJepang] = useState([]);
@@ -12,9 +16,21 @@ export const Homepage = () => {
   // const [topHeadlinesKanada, setTopHeadlinesKanada] = useState([]);
 
   useEffect(() => {
-    const fetchIndonesia = async () => {
+    const fetchNews = async () => {
       try {
-        const fetchedTopHeadlinesIndonesia = await Indonesia.get(
+        const fetchedArticles = await BaseNews.get(
+          "https://api.spaceflightnewsapi.net/v3/articles"
+        );
+        const fetchedBlogs = await BaseNews.get(
+          "https://api.spaceflightnewsapi.net/v3/blogs"
+        );
+        const fetchedInfos = await BaseNews.get(
+          "https://api.spaceflightnewsapi.net/v3/info"
+        );
+        const fetchedReports = await BaseNews.get(
+          "https://api.spaceflightnewsapi.net/v3/reports"
+        );
+        const fetchedTopHeadlinesIndonesia = await BaseNews.get(
           "https://api.spaceflightnewsapi.net/v3/articles"
         );
         // const fetchedTopHeadlinesAustria = await Austria.get(
@@ -30,6 +46,10 @@ export const Homepage = () => {
         //   "https://newsapi.org/v2/top-headlines"
         // );
 
+        setArticles(fetchedArticles.data);
+        setBlogs(fetchedBlogs.data);
+        setInfos(fetchedInfos.data);
+        setReports(fetchedReports.data);
         setTopHeadlinesIndonesia(fetchedTopHeadlinesIndonesia.data);
         console.log(fetchedTopHeadlinesIndonesia.data);
 
@@ -41,18 +61,21 @@ export const Homepage = () => {
         console.log(error);
       }
     };
-    fetchIndonesia();
+    fetchNews();
   }, []);
 
   return (
     <div>
-      <NewsCarousel data={topHeadlinesIndonesia} />
-      <div className="centered">
-        {/* <marquee className="keterangan">
+      <NewsCarousel data={blogs} />
+      {/* <div className="centered">
+        <marquee className="keterangan">
           BERITA TERBARU DARI NEGARA MAJU DI DUNIA BERDASARKAN BENUA MENURUT
           INTERNATIONAL MONETARY FUND - IMF
-        </marquee> */}
-      </div>
+        </marquee>
+      </div> */}
+      <NewsSlider title={"Article"} data={articles} />
+      <NewsSlider title={"Blog"} data={blogs} />
+      <NewsSlider title={"Reports"} data={reports} />
       {/* <NewsSlider
         title={"Benua Eropa - Austria News Update"}
         data={topHeadlinesAustria}

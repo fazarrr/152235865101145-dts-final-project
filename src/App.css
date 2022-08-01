@@ -50,9 +50,18 @@ body {
 }
 
 .list-judul {
+  font-size: large;
+  font-variant: small-caps;
   margin: 0;
   /* color: white; */
   padding-top: 10px;
+}
+
+.list-tanggal {
+  margin: 0;
+  /* color: white; */
+  padding-top: 10px;
+  color: rgb(245, 23, 23);
 }
 
 .masked {

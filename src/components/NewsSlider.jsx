@@ -51,11 +51,11 @@ export const NewsSlider = ({ data, title, original }) => {
               key={i}
               className={`${original ? "original" : "list"} centered`}
             >
-              <Link to={"/"}>
-                {e.urlToImage != null ? (
+              <Link to={`articles/${e.id}`}>
+                {e.imageUrl != null ? (
                   <img
                     className={`slider-image ${original ? "original" : "list"}`}
-                    src={e.urlToImage}
+                    src={e.imageUrl}
                     alt={e.title}
                   />
                 ) : (
@@ -66,6 +66,9 @@ export const NewsSlider = ({ data, title, original }) => {
                   />
                 )}
                 <div className="list-judul">{e.title}</div>
+                <div className="list-tanggal">
+                  Publish date : {e.publishedAt}
+                </div>
               </Link>
             </div>
           );
