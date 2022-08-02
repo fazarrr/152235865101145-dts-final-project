@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
-export const NewsSlider = ({ data, title, original }) => {
+const NewsSlider = ({ data, title, original }) => {
   const settings = {
     infinite: true,
     slidesToShow: 5,
@@ -66,9 +66,7 @@ export const NewsSlider = ({ data, title, original }) => {
                   />
                 )}
                 <div className="list-judul">{e.title}</div>
-                <div className="list-tanggal">
-                  Publish date : {e.publishedAt}
-                </div>
+                <div className="list-tanggal">News From : {e.newsSite}</div>
               </Link>
             </div>
           );

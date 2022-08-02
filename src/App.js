@@ -1,6 +1,5 @@
 import "./App.css";
-import { DetailMovie } from "./containers/DetailMovie";
-import { Homepage } from "./containers/HomePage";
+import HomePage from "./containers/HomePage";
 import { Route, Routes } from "react-router-dom";
 
 import { ThemeProvider } from "@mui/material";
@@ -12,6 +11,7 @@ import Footer from "./components/Footer";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
 import { DetailTv } from "./containers/DetailTv";
+import Articles from "./containers/Articles";
 const App = () => {
   return (
     <>
@@ -22,17 +22,18 @@ const App = () => {
             element={
               <>
                 <Navbar />
-                <Homepage />
+                <HomePage />
                 <Footer />
               </>
             }
           />
           <Route
-            path="/movies"
+            path="/Articles"
             element={
               <>
                 <Navbar />
-                <Homepage />
+                {/* <HomePage /> */}
+                <Articles />
                 <Footer />
               </>
             }
@@ -42,7 +43,7 @@ const App = () => {
             element={
               <>
                 <Navbar />
-                <Homepage />
+                <HomePage />
                 <Footer />
               </>
             }
@@ -52,7 +53,7 @@ const App = () => {
             element={
               <>
                 <Navbar />
-                <Homepage />
+                <HomePage />
                 <Footer />
               </>
             }
@@ -62,7 +63,7 @@ const App = () => {
             element={
               <>
                 <Navbar />
-                <Homepage />
+                <HomePage />
                 <Footer />
               </>
             }
@@ -88,7 +89,7 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Navbar />
-                <DetailMovie />
+                {/* <DetailMovie /> */}
                 <Footer />
               </ProtectedRoute>
             }

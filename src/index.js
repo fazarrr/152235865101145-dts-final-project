@@ -5,13 +5,21 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Articles from "./containers/Articles";
+import Blogs from "./containers/Blogs";
+import Reports from "./containers/Reports";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="Articles" element={<Articles />} />
+        <Route path="Blogs" element={<Blogs />} />
+        <Route path="Reports" element={<Reports />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

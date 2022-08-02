@@ -1,4 +1,3 @@
-import { red } from "@mui/material/colors";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
@@ -69,11 +68,6 @@ class CustomSlide extends Component {
             {news.title}
           </div>
           <div
-            style={{ fontWeight: 300, fontSize: "12px", marginBottom: "15px" }}
-          >
-            {news.newsSite}
-          </div>
-          <div
             style={{ fontWeight: 400, fontSize: "15px", marginBottom: "5px" }}
           >
             {news.summary}
@@ -87,8 +81,7 @@ class CustomSlide extends Component {
   }
 }
 
-export const NewsCarousel = ({ data }) => {
-  //   const [category, setCategory] = useState([]);
+const NewsCarousel = ({ data }) => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -133,19 +126,6 @@ export const NewsCarousel = ({ data }) => {
     ],
   };
 
-  //   useEffect(() => {
-  //     const fetchCategory = async () => {
-  //       try {
-  //         const fetchedCategory = await Header.get("/top-headlines");
-  //         setCategory(fetchedCategory.data.category);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-
-  //     fetchCategory();
-  //   }, []);
-
   const news = data;
 
   return (
@@ -158,3 +138,5 @@ export const NewsCarousel = ({ data }) => {
     </div>
   );
 };
+
+export default NewsCarousel;

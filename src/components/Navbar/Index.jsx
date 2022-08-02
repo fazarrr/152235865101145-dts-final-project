@@ -41,17 +41,17 @@ const Navbar = () => {
           <NavLink to="/" activeStyle>
             Home
           </NavLink>
-          <NavLink to="/series" activeStyle>
-            Teknologi
+          {/* <NavLink to="/Articles" activeStyle> */}
+          <NavLink to="/" activeStyle>
+            Article
           </NavLink>
-          <NavLink to="/movies" activeStyle>
-            Kesehatan
+          {/* <NavLink to="/Blogs" activeStyle> */}
+          <NavLink to="/" activeStyle>
+            Blog
           </NavLink>
-          <NavLink to="/newandpopular" activeStyle>
-            Olahraga
-          </NavLink>
-          <NavLink to="/mylist" activeStyle>
-            Ekonomi
+          {/* <NavLink to="/Reports" activeStyle> */}
+          <NavLink to="/" activeStyle>
+            Report
           </NavLink>
         </NavMenu>
         <NavBtn>
