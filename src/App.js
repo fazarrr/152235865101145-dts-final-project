@@ -10,8 +10,10 @@ import theme from "./themes/Theme";
 import Footer from "./components/Footer";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
-import { DetailTv } from "./containers/DetailTv";
 import Articles from "./containers/Articles";
+import Blogs from "./containers/Blogs";
+import Reports from "./containers/Reports";
+
 const App = () => {
   return (
     <>
@@ -31,40 +33,35 @@ const App = () => {
             path="/Articles"
             element={
               <>
-                <Navbar />
-                {/* <HomePage /> */}
-                <Articles />
-                <Footer />
+                <ProtectedRoute>
+                  <Navbar />
+                  <Articles />
+                  <Footer />
+                </ProtectedRoute>
               </>
             }
           />
           <Route
-            path="/series"
+            path="/Blogs"
             element={
               <>
-                <Navbar />
-                <HomePage />
-                <Footer />
+                <ProtectedRoute>
+                  <Navbar />
+                  <Blogs />
+                  <Footer />
+                </ProtectedRoute>
               </>
             }
           />
           <Route
-            path="/newandpopular"
+            path="/Reports"
             element={
               <>
-                <Navbar />
-                <HomePage />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/mylist"
-            element={
-              <>
-                <Navbar />
-                <HomePage />
-                <Footer />
+                <ProtectedRoute>
+                  <Navbar />
+                  <Reports />
+                  <Footer />
+                </ProtectedRoute>
               </>
             }
           />
@@ -85,7 +82,7 @@ const App = () => {
             }
           />
           <Route
-            path="/movie/:id"
+            path="/Articles/:id"
             element={
               <ProtectedRoute>
                 <Navbar />
@@ -95,11 +92,21 @@ const App = () => {
             }
           />
           <Route
-            path="/tv/:id"
+            path="/Blogs/:id"
             element={
               <ProtectedRoute>
                 <Navbar />
-                <DetailTv />
+                {/* <DetailMovie /> */}
+                <Footer />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/Reports/:id"
+            element={
+              <ProtectedRoute>
+                <Navbar />
+                {/* <DetailMovie /> */}
                 <Footer />
               </ProtectedRoute>
             }

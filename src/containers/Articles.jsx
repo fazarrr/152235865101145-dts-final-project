@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NewsCard from "../components/NewsCard";
+import BaseNews from "../apis/News";
 
 const Articles = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const fetchedArticles = await BaseNews.get("articles");
+
+        setArticles(fetchedArticles.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchNews();
+  }, []);
+
   return (
     <div>
-      <NewsCard />
+      <NewsCard title={"Articles"} data={articles} />
     </div>
   );
 };

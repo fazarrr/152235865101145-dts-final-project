@@ -21,6 +21,17 @@ const theme = createTheme({
       textDecoration: "none",
       color: "#e5e5e5",
     },
+    footer: {
+      fontFamily: "Inter",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "13px",
+      lineHeight: "16px",
+      textDecoration: "none",
+      color: "#e5e5e5",
+      display: "flex",
+      justifyContent: "center",
+    },
     caption2: {
       fontFamily: "Inter",
       fontStyle: "normal",

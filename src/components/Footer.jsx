@@ -9,8 +9,8 @@ import Stack from "@mui/material/Stack";
 const Footer = () => {
   return (
     <Box sx={{ bgcolor: "#BB6464", color: "grey.700" }}>
-      <Container maxWidth="md" sx={{ py: 6, mt: 8 }}>
-        <Grid container spacing={4} sx={{ mb: 4, textAlign: "left" }}>
+      <Container maxWidth="md" sx={{ py: 2, mt: 8, mb: 1 }}>
+        {/* <Grid container spacing={4} sx={{ mb: 4, textAlign: "left" }}>
           <Grid item xs={6} md={3}>
             <Stack spacing={"15px"}>
               <Typography variant="caption" component="a" href="#">
@@ -39,9 +39,9 @@ const Footer = () => {
               </Typography>
             </Stack>
           </Grid>
-        </Grid>
+        </Grid> */}
 
-        <Typography variant="caption2" sx={{ float: "left" }}>
+        <Typography variant="footer">
           © 2022 Fab - News, All Right Reserved
         </Typography>
       </Container>

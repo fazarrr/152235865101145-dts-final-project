@@ -41,16 +41,13 @@ const Navbar = () => {
           <NavLink to="/" activeStyle>
             Home
           </NavLink>
-          {/* <NavLink to="/Articles" activeStyle> */}
-          <NavLink to="/" activeStyle>
+          <NavLink to="/Articles" activeStyle>
             Article
           </NavLink>
-          {/* <NavLink to="/Blogs" activeStyle> */}
-          <NavLink to="/" activeStyle>
+          <NavLink to="/Blogs" activeStyle>
             Blog
           </NavLink>
-          {/* <NavLink to="/Reports" activeStyle> */}
-          <NavLink to="/" activeStyle>
+          <NavLink to="/Reports" activeStyle>
             Report
           </NavLink>
         </NavMenu>

@@ -66,7 +66,7 @@ export default function Register() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "#EB1D36" }}>M</Avatar>
+          <Avatar sx={{ m: 1, bgcolor: "#EB1D36" }}>FAB</Avatar>
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
