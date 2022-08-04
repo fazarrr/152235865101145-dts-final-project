@@ -1,55 +1,49 @@
 import React, { useEffect, useState } from "react";
 // import { landscape, portrait } from "../components/DummyData";
-import MovieSlider from "../components/MovieSlider";
-import MovieDetail from "../components/MovieDetail";
-import tmdb from "../apis/Tmdb";
+import NewsDetail from "../components/NewsDetail";
+// import tmdb from "../apis/Tmdb";
+import BaseNews from "../apis/News";
 import { useParams } from "react-router-dom";
 
 export const DetailNews = () => {
   let params = useParams();
 
-  const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState([]);
-
   // const [newss, setNewss] = useState([]);
-  const [news, setnews] = useState([]);
+  const [news, setNews] = useState([]);
 
-  const idMovie = params?.id;
   const id = params?.id;
 
   useEffect(() => {
-    const fetchMovie = async () => {
+    const fetchNews = async () => {
       try {
-        const fetchedMovie = await tmdb.get(
-          `${movie.number_of_season ? "tv" : "movie"}/${idMovie}`
-        );
-        setMovie(fetchedMovie.data);
+        const fetchedNews = await BaseNews.get(`articles/${id}`);
+        setNews(fetchedNews.data);
       } catch (error) {
         console.log(error);
       }
     };
 
-    fetchMovie();
-  }, [movie.number_of_season, idMovie]);
+    fetchNews();
+  }, [news.publishedAt, id]);
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const fetchedMovies = await tmdb.get("trending/movie/week");
-        setMovies(fetchedMovies.data.results);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchMovies = async () => {
+  //     try {
+  //       const fetchedMovies = await tmdb.get("trending/movie/week");
+  //       setMovies(fetchedMovies.data.results);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
-    fetchMovies();
-  }, []);
+  //   fetchMovies();
+  // }, []);
 
   return (
     <>
-      <MovieDetail data={movie} />
-      <MovieSlider title={"Popular Movies"} data={movies} />
-      <MovieSlider title={"Portrait Movies"} data={movies} original={true} />
+      <NewsDetail data={news} />
+      {/* <MovieSlider title={"Popular Movies"} data={movies} />
+      <MovieSlider title={"Portrait Movies"} data={movies} original={true} /> */}
     </>
   );
 };

@@ -13,6 +13,7 @@ import Register from "./containers/Register";
 import Articles from "./containers/Articles";
 import Blogs from "./containers/Blogs";
 import Reports from "./containers/Reports";
+import { DetailNews } from "./containers/DetailNews";
 
 const App = () => {
   return (
@@ -86,7 +87,7 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Navbar />
-                {/* <DetailMovie /> */}
+                <DetailNews />
                 <Footer />
               </ProtectedRoute>
             }

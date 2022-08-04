@@ -51,7 +51,7 @@ const NewsSlider = ({ data, title, original }) => {
               key={i}
               className={`${original ? "original" : "list"} centered`}
             >
-              <Link to={`articles/${e.id}`}>
+              <Link to={`/articles/${e.id}`}>
                 {e.imageUrl != null ? (
                   <img
                     className={`slider-image ${original ? "original" : "list"}`}

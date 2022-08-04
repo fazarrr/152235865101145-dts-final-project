@@ -5,16 +5,12 @@ const NewsDetail = ({ data }) => {
   return (
     <div>
       <div className="detail-news-poster">
-        <div className="detail-news-poster-contain">
-          <h1>{`${data.title ? data.title : data.name} (${
-            data.release_date
-              ? data.release_date?.split("-")[0]
-              : "Season " + data.number_of_seasons
-          })`}</h1>
-          <div className="truncate">
-            <p>{data.overview}</p>
-          </div>
-          <div className="button-group">
+        <div className="detail-news-poster-contain centered">
+          {/* <h1>{data.title ? data.title : "Eror"}</h1> */}
+          {/* <div className="truncate">
+            <p>{data.summary}</p>
+          </div> */}
+          {/* <div className="button-group">
             <button className="play-button">
               <img src="/play-button.png" className="play-icon" alt="" />
               <span
@@ -38,18 +34,18 @@ const NewsDetail = ({ data }) => {
                 More Information
               </span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <img
-          className="detail-movie-poster-image"
-          src={`${BASE_IMAGE_URL}${data.backdrop_path}`}
-          alt=""
+          className="detail-news-poster-image"
+          src={data.imageUrl}
+          alt={data.title}
         />
       </div>
-      <div className="detail-movie-description">
-        <h3>Description</h3>
-        <p>{data.overview}</p>
+      <div className="detail-news-description">
+        <h3>Summary</h3>
+        <p>{data.summary}</p>
       </div>
     </div>
   );

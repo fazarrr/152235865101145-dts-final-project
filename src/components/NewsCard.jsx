@@ -20,10 +20,10 @@ const NewsCard = ({ data, title }) => {
   return (
     <div className="container" sx={{ m: 5 }}>
       <p className="list-title">{title}</p>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 10 }}>
         {news.map((e, i) => {
           return (
-            <Grid item xs={4}>
+            <Grid item sx={{ display: "flex", flexDirection: "column" }}>
               <div key={i}>
                 <Card sx={{ maxWidth: 345 }}>
                   <CardHeader
