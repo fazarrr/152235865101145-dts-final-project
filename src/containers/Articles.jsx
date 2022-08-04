@@ -8,7 +8,7 @@ const Articles = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const fetchedArticles = await BaseNews.get("articles");
+        const fetchedArticles = await BaseNews.get("articles?_limit=30");
 
         setArticles(fetchedArticles.data);
       } catch (error) {

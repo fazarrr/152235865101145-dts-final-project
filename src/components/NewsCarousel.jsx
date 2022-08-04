@@ -74,7 +74,12 @@ class CustomSlide extends Component {
           </div>
         </div>
         <div className="news-image-carousel">
-          <img src={news.imageUrl} alt="news-poster" className="masked" />
+          <img
+            src={news.imageUrl}
+            alt="news-poster"
+            className="masked"
+            style={{ maxHeight: "360px" }}
+          />
         </div>
       </div>
     );

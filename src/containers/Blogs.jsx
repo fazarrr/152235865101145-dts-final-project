@@ -8,7 +8,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const fetchedBlogs = await BaseNews.get("blogs");
+        const fetchedBlogs = await BaseNews.get("blogs?_limit=30");
 
         setBlogs(fetchedBlogs.data);
       } catch (error) {

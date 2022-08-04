@@ -8,7 +8,7 @@ const Reports = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const fetchedReports = await BaseNews.get("reports");
+        const fetchedReports = await BaseNews.get("reports?_limit=30");
 
         setReports(fetchedReports.data);
       } catch (error) {

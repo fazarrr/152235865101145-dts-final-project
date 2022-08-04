@@ -42,7 +42,7 @@ const Footer = () => {
         </Grid> */}
 
         <Typography variant="footer">
-          © 2022 Fab - News, All Right Reserved
+          © 2022 fab-news by Fazar Bahari, All Right Reserved
         </Typography>
       </Container>
     </Box>
